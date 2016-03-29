@@ -9,6 +9,12 @@ function toNatural(date) {
     return months[date.getMonth()] + ' ' + (date.getDate() < 10 ? '0' : '') + date.getDate() + ', ' + date.getFullYear();
 }
 
+app.get('/', function(req, res) {
+    
+    res.end('Pass Params...');
+    
+});
+
 app.get('/:str', function(req, res) {
     
     var str = req.params.str,
